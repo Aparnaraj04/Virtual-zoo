@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <title>HOME</title>
+    <style>
+        :root{
+            --primary-color:#00605f;
+            --secondary-color:#017479;
+            --text-dark:#0f172a;
+            --text-light:#94a3b8;
+            --white:#ffffff;
+            --max-width:1400px;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background:url("background.jpg");
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 450px;
+        }
+        .container{
+            max-width: var(--max-width);
+            min-height: 100vh;
+            margin: auto;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+        }
+        nav{
+            display: flex;
+            width: 100%;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            
+        }
+        .logo{
+            width: 100px;
+            cursor: pointer;
+        }
+        .nav_logo img{
+            max-width: 20px;
+            max-height: 40px;
+        }
+        .nav_links{
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            flex: 2;
+            text-align: left;
+            padding-left: 650px;
+        }
+        .link a{
+            text-decoration: none;
+            display: inline-block;
+            list-style: none;
+            font-weight: 700;
+            position: relative;
+            color:var(--white);
+        }
+        .link ::after{
+            content:'';
+            width:50%;
+            height: 3px;
+            position: absolute;
+            bottom: -5px;
+            left:50%;
+            transform: translate(-50%);
+            background-color: var(--white);
+            transition: 0.3s;
+        }
+        .login:hover::after{
+            width: 30%;
+        }
+        .search{
+            width: 80%;
+            max-width: 200px;
+            padding: .3rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background-color: var(--white);
+            border-radius: 1rem;
+            transition:0.3s;
+
+        }
+        .search input{
+            width: 100%;
+            font-size: 1rem;
+            color: var(--primary-color);
+            outline: none;
+            border: none;
+        }
+        .search input::placeholder{
+            color: var(--secondary-color);
+        }
+        .search span{
+            font-size: 1.5;
+            color: var(--primary-color);
+        }
+        .login{
+            padding: .5rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-weight: 600;
+            color: var(--white);
+            background-color: var(--primary-color);
+            border-radius: 2rem;
+            cursor: pointer;
+            transition: width 0.3s;
+        }
+        .login:hover{
+            background-color: var(--secondary-color);
+
+        }
+
+        
+
+        .login span{
+            padding: 5px 8px;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            background-color: var(--white);
+            border-radius: 100%;
+        }
+        .socials{
+            position: absolute;
+            top: 35rem;
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+            cursor: pointer;
+            
+        }
+        .socials::after{
+            position: absolute;
+            right: 5%;
+            bottom: 8%;
+            background-color: var(--white);
+        }
+        .socials span{
+            font-size: 2rem;
+            color: var(--white);
+        }
+        .text-box{
+            color: var(--white);
+            position: absolute;
+            bottom: 8%;
+            left:20%
+        }
+        .text-box p{
+            font-size: 40px;
+            font-weight: 600;
+        }
+        .text-box h1{
+            font-size: 70px;
+            line-height: 160px;
+            margin-left: -10px;
+            color: transparent;
+            -webkit-text-stroke: 1px white;
+            background: url(images.jpg);
+            -webkit-background-clip: text;
+            background-position: 0 0;
+            animation: back 20s linear infinite;
+        }
+        @keyframes back{
+            100%{
+                background-position: 2000px 0;
+            }
+        }
+
+        .text-box h3{
+            font-size: 30px;
+            font-weight: 500;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="containet">
+        <nav>
+            <div class="nav_log">
+                <img src="logo.png" class="logo">
+            </div>
+            <ul class="nav_links">
+                <li class="link"><a href="#">Home</a></li>
+                <li class="link"><a href="#">About</a></li>
+                <li class="link"><a href="#">Blog</a></li>
+                <li class="link"><a href="#">Map</a></li>
+            </ul>
+            <div class="search">
+                <input type="text" placeholder="Search">
+                <span><i class="ri-search-eye-line"></i></span>
+            </div>
+            <div class ="login">
+                <span><i class="ri-user-line"></i></span>
+                Log Out
+            </div>
+
+        </nav>
+        <div class="text-box">
+            <p>I'M</p>
+            <h1>VIRTUAL ZOO</h1>
+            <h3>IT WLL HELP TO LEARN THE ANIMAL BEHAVIOUR AND SOUND OF THE ANMALS </h3>
+        </div>
+            <div class="socials">
+                <span><i class="ri-twitter-line"></i></span>
+                <span><i class="ri-facebook-circle-fill"></i></span>
+                <span><i class="ri-instagram-line"></i></span>
+                <span><i class="ri-youtube-line"></i></span>
+            </div>
+    </div>
+    
+</body>
+</html>
